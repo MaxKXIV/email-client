@@ -1,0 +1,39 @@
+/* EmailList.css */
+
+.email-list-container {
+  grid-area: email-list;
+  background-color: #fff;
+  border-right: 1px solid #e0e0e0;
+  overflow-y: auto;
+}
+
+.email-list-header {
+  padding: 15px;
+  background-color: #0078d4;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.email-list {
+  overflow-y: auto;
+}
+
+.email-list-item {
+  cursor: pointer;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s;
+}
+
+.email-list-item.read {
+  background-color: #f9f9f9;
+}
+
+.email-list-item.active {
+  background-color: #e6f7ff;
+}
+
+.email-list-item:hover {
+  background-color: #f2f2f2;
+}

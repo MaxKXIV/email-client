@@ -1,0 +1,18 @@
+/* EmailBody.css */
+
+.email-body-container {
+  grid-area: email-body;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.email-body-header {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.email-body-content {
+  line-height: 1.6;
+}

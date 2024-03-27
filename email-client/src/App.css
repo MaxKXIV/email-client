@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  display: grid;
+  grid-template-columns: 300px 1fr; /* 1fr means 1 fraction of the available space */
+  grid-template-rows: auto 1fr; /* auto for search bar, 1fr for the rest of the space */
+  grid-template-areas:
+    "search-bar search-bar"
+    "email-list email-body";
   min-height: 100vh;
+}
+
+.search-bar {
+  grid-area: search-bar;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.email-list-container {
+  grid-area: email-list;
+  background-color: #fff;
+  border-right: 1px solid #e0e0e0;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.email-list-header {
+  padding: 15px;
+  background-color: #0078d4;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.email-list {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.email-list-item {
+  cursor: pointer;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s;
+}
+
+.email-list-item.read {
+  background-color: #f9f9f9;
+}
+
+.email-list-item.active {
+  background-color: #e6f7ff;
+}
+
+.email-list-item:hover {
+  background-color: #f2f2f2;
+}
+
+.email-body-container {
+  grid-area: email-body;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: flex-end; /* Move content to the right */
+  flex-direction: column;
+}
+
+.email-body-header {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.email-body-content {
+  line-height: 1.6;
+}
+
+/* Adjust the layout for wider screens */
+@media (min-width: 768px) {
+  body {
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: "search-bar search-bar" "email-list email-body";
   }
 }

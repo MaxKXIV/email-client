@@ -1,0 +1,8 @@
+/* SearchBar.css */
+
+.search-bar {
+    grid-area: search-bar;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
