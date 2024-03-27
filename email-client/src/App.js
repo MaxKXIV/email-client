@@ -4,7 +4,7 @@ import './App.css';
 import { fetchEmails } from './services/emailService';
 import EmailList from './components/emailList/email.list.component';
 import EmailBody from './components/emailBody/emailBody';
-import SearchBar from './components/searchBar/searcbhar.component';
+import SearchBar from './components/searchbar/searchbar.component';
 function App() {
   const [emails, setEmails] = useState([]);
   const [selectedEmail, setSelectedEmail] = useState(null);
